@@ -7,19 +7,25 @@
     <title>컴퓨터공학부 - 김수종</title>
 
     <style>
+        body {
+            background-image: url(images/image1.jpg);
+            background-repeat: no-repeat; /* 배경 이미지 반복 금지 */
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
         /* 전체 콘텐츠를 감싸는 div */
         #container {
-            background-color: #afd2ff;
             width: 1000px;  /* 너비 지정 */
             margin: 0 auto; /* 가로로 중앙에 배치 */
-            padding: 10px;
+            padding: 10px; /* 세로 넓이 조절 */
         }
 
         /* 학과 소개 메인 div */
         #main {
             width: 1000px;
             border: 1px solid #ccc; /* 테두리 지정 */
-            
+            background-color: #e0e0e0ab;
         }
 
         img {
@@ -28,13 +34,58 @@
 
         h1 {
             color: #fff;
-            background-color: #110c63;
+            background-color: #161629;
             font-family: "맑은 고딕";
             padding: 20px;
-            margin: 0;
+            margin: 0; /* 세로 간격 조절 */
+        }
+
+        h2 {
+            color: #2395ff;
+            font-size: 1.8em; /* 1em = 16px */
+            text-align: center; /* 가운데 정렬 */
+        }
+
+        p {  /* 전체 문단 */
+            font-size: 1.1em;
+            font-weight: bold; /* 글자 굵게 */
+            line-height: 2em;
+            text-align: center;
+        }
+
+        ul { /* 목록 리스트 */
+            font-size: 1.2em;
+            line-height: 2em;
+            font-weight: bold;
+            list-style-type: none;
+            color: #ff8800;
+        }
+
+        ol {
+            font-size: 0.8em;
+            line-height: 2em;
+            font-weight: normal; /* 글자 굵게 취소 */
+            color: #462302;
+
+        }
+
+        .info {
+            text-align: justify;
+            padding: 20px;
+            background-color: #4f9bff80;
+        }
+
+        .res_point {
+            color: rgb(255, 73, 73);
+        }
+
+        .mini_text {
+            font-size: 0.8em;
+            padding: 20pt;
         }
     </style>
 
+   
 </head>
 <body>
     <!-- 전체 컨텐츠 영역 -->
@@ -48,7 +99,7 @@
 
 
             <h2>학과 소개</h2>
-            <p>
+            <p class="info">
                 본 학부는 소프트웨어 개발 인재 양성을 목표로 1988년 전자계산학과로 출발하여 
                 2023년 현재까지 34년 동안 2천여 명의 졸업생을 배출하였습니다. <br>
                 졸업생들은 우리나라 최고의 IT기업에서부터 소프트웨어 전문개발업체, 기업체, 금융기업, 공공기관 
@@ -62,7 +113,7 @@
             <h2>컴퓨터공학 전공</h2>
             <p>
                 컴퓨터공학의 전반적인 교과목을 학습하여 다양한 IT분야로 진출할 수 있는 기본 역량을 배양하고, <br>
-                사물인터넷, 클라우드시스템, 빅데이터처리, 인공지능 등 고급 IT기술에 대한 심화 학습을 통해 <br>
+                <span class="res_point">사물인터넷, 클라우드시스템, 빅데이터처리, 인공지능</span> 등 고급 IT기술에 대한 심화 학습을 통해 <br>
                 취업 역량을 강화하여 현장 밀착형 IT 전문가를 양성하는 전공 <br>
             </p>
             <hr>
@@ -70,7 +121,7 @@
             <h2>메타버스 전공</h2>
             <p>
                 프로그램 코딩 주제의 기초 교육과정과 메타버스 콘텐츠 제작 주제의 심화 교육과정을 통해 <br>
-                메타버스 및 게임 등 관련 분야에서 필요로 하는 코딩 역량과 콘텐츠 제작 역량을 <br>
+                <span class="res_point">메타버스</span> 및 <span class="res_point">게임</span> 등 관련 분야에서 필요로 하는 코딩 역량과 콘텐츠 제작 역량을 <br>
                 겸비한 창의적인 인력을 양성하는 전공 <br>
             </p>
             <hr>
@@ -91,7 +142,7 @@
             <hr>
 
             <!-- 주소 구역 -->
-            <p>
+            <p class="mini_text">
                 (우) 46958 부산광역시 사상구 괘법동 신라대학교 국제교육관 440-1호 <br>
                 TEL : 051-999-5653,5497 FAX : 051-999-5160
             </p>

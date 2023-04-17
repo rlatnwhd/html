@@ -31,7 +31,7 @@ header h1 {
 /* header 의 자식인 nav 태그에 적용 */
 header > nav {
     /* background-color: #fdfb80; */
-    width: 50%; /* 넓이 */
+    width: 70%; /* 넓이 */
     float: right; /* 오른쪽 정렬 */
 }
 

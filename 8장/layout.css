@@ -24,7 +24,7 @@ h1 {
 /* hearder 의 자손인 h1 태그에 적용 */
 header h1 {
     color: #000000; /* 글자 색깔 */
-    width: 40%; /* 넓이 */
+    width: 30%; /* 넓이 */
     float: left; /* 왼쪽 정렬 */
 }
 

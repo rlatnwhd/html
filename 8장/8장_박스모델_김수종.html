@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 레벨 요소와 인라인 레벨 요소 - 김수종</title>
+    <style>
+        /* 콘텐츠 크기 알아보기 */
+        .content {
+            width: 100px; /* 가로 넓이 */
+            height: 100px; /* 세로 영역 길이 */
+            margin: 30px; /* 바깥 여백 지정*/
+            padding: 10px; /* 안쪽 여백 지정*/
+            border: 5px solid black; /* 테두리 지정 */
+        }
+        
+        /* 이미지 블록 요소로 정리 */
+        #block img {
+            display: block; /* 블록 요소로 지정 */
+            margin: 10px; /* 바깥 여백 지정*/
+        }
+
+        /* 메뉴(리스트) 배치 방법 */
+        #list li {
+            background-color: #ffcece; /* 배경색 지정 */
+            margin: 10px; /* 바깥 여백 지정*/
+            width: 150px; /* 가로 넓이 */
+            height: 50px; /* 세로 영역 길이 */
+            /* 기본이 block 요소이다. 가로, 세로 길이 설정이 가능하다. */
+        }
+
+        #inline li {
+            background-color:#fff78a; /* 배경색 지정 */
+            margin: 10px; /* 바깥 여백 지정*/
+            display: inline; /* 인라인 요소로 지정 */
+            width: 150px; /* 가로 넓이 */
+            height: 50px; /* 세로 영역 길이 */
+            /* inline 요소는 가로 정렬이다. 가로, 세로 길이 설정이 불가능하다. */
+        }
+
+        #inlineblock li {
+            background-color: #baffad; /* 배경색 지정 */
+            margin: 10px; /* 바깥 여백 지정*/
+            display: inline-block; /* 인라인-블럭 요소로 지정 */
+            width: 150px; /* 가로 넓이 */
+            height: 50px; /* 세로 영역 길이 */
+            /* inline-block 요소는 가로 정렬이다. 가로, 세로 길이 설정이 가능하다. */
+        }
+
+        .overlap {
+            width: 100px; /* 가로 넓이 */
+            height: 100px; /* 세로 영역 길이 */
+            margin: 30px; /* 바깥 여백 지정*/
+            padding: 10px; /* 안쪽 여백 지정*/
+            border: 5px solid black; /* 테두리 지정 */
+            display: inline-block; /* 인라인-블럭 요소로 지정 */
+        }
+        /* 블럭 요소로 지정을 하면 margin이 중첩이 되지만,
+        인라인 요소로 지정을 하면 margin이 중첩이 되지 않는다. */
+
+        .box1, .box2 {
+            width: 300px; /* 가로 넓이 */
+            height: 150px; /* 세로 영역 길이 */
+            margin: 30px; /* 바깥 여백 지정*/
+            padding: 10px; /* 안쪽 여백 지정*/
+            border: 5px solid black; /* 테두리 지정 */
+        }
+
+        .box1 {
+            box-sizing: content-box;
+            /* 가로길이 330px */
+            /* 330(가로길이) = 300(가로길이) + 5*(테두리) + 10*2(안쪽여백) */
+        }
+
+        .box2 {
+            box-sizing: border-box;
+            /* 가로길이 300px */
+            /* 300(가로길이) = 270(가로길이) + 5*(테두리) + 10*2(안쪽여백) */
+
+        }
+    </style>
+</head>
+<body>
+    <h1>콘텐츠 크기</h1>
+    <div class="content" style="background-color: #ffcece;"></div>
+    <div class="content" style="background-color: #fff78a;"></div>
+    <div class="content" style="background-color: #baffad;"></div>
+
+    <hr>
+
+    <h1>이미지 인라인 요소로 화면 배치</h1>
+    <div> 
+        <img src="images/pic1.jpg">
+        <img src="images/pic2.jpg">
+        <img src="images/pic3.jpg">
+    </div>
+
+    <h1>이미지 블록 요소로 화면 배치</h1>
+    <div id="block">
+        <img src="images/pic1.jpg">
+        <img src="images/pic2.jpg">
+        <img src="images/pic3.jpg">
+    </div>
+
+    <hr>
+
+    <h1>메뉴(리스트) 배치</h1>
+    <ul id="list">
+        <li>학과 소개</li>
+        <li>컴퓨터공학전공</li>
+        <li>메타버스전공</li>
+        <li>교육 목표</li>
+        <li>주요 교과목</li>
+    </ul>
+    
+    <h1>메뉴(리스트) 인라인 배치</h1>
+    <ul id="inline">
+        <li>학과 소개</li>
+        <li>컴퓨터공학전공</li>
+        <li>메타버스전공</li>
+        <li>교육 목표</li>
+        <li>주요 교과목</li>
+    </ul>
+
+    <h1>메뉴(리스트) 인라인-블럭 배치</h1>
+    <ul id="inlineblock">
+        <li>학과 소개</li>
+        <li>컴퓨터공학전공</li>
+        <li>메타버스전공</li>
+        <li>교육 목표</li>
+        <li>주요 교과목</li>
+    </ul>
+    
+    <hr>
+
+    <h1>콘텐츠 마진 중첩</h1>
+    <div class="content" style="background-color: #ffcece;"></div>
+    <div class="content" style="background-color: #fff78a;"></div>
+    <div class="overlap" style="background-color: #baffad;"></div>
+    <div class="overlap" style="background-color: #adf3ff;"></div>
+
+    <hr>
+
+    <h1>콘텐츠 정하기</h1>
+    <div class="box1" style="background-color: #ffcece;">content-box</div>
+    <div class="box2" style="background-color: #fff78a;">border-box</div>
+</body>
+</html>

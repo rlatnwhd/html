@@ -1,0 +1,82 @@
+/* 문서 전체 글꼴은 맑은 고딕, 바깥여백 5px */
+* {
+    font-family: "맑은 고딕"; /* 글꼴 지정 */
+    margin: 5px; /* 바깥 여백 지정 */
+}
+
+/* header, footer 영역 - 안쪽 여백 20, 배경 색상, 가운데 정렬 */
+header, footer {
+    padding: 20px; /* 안쪽 여백 지정 */
+    background-color: rgb(253, 255, 143);
+    text-align: center; /* 텍스트, 그림 가운데 정렬 | div 같은 영역은 좌우바깥여백 auto로 지정 */
+    
+}
+
+/* nav 영역 - 배경색, 가운데 정렬, 글자크기 18, 진하게, 안쪽 여백 20 */
+nav {
+    background-color: rgb(209, 250, 155);
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 하이퍼링크 - 밑줄 없음, 가로 길이 100, 세로 길이, 30, 안쪽 여백 20 */
+a {
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* 하이퍼링크 색상, 한번 방문된 하이퍼링크 색상 지정 */
+a:link, a:visited {
+    color: black;
+}
+
+/* 마우스 커서를 올렸을 때, 하이퍼링크를 클릭 했을 때 지정 */
+a:hover, a:active {
+    color: white;
+    text-decoration: underline;
+    background-color: #006400;
+}
+
+/* 배경 색상, 테두리, 가로 길이 48%, 높이 200, 가로 정렬 */
+section {
+    background-color: #bbf5ff;
+    border: 3px solid #79a1eb;
+    width: 48%;
+    height: 200px;
+    float: left;
+}
+
+aside, footer {
+    clear: both;
+}
+
+/* 각 section의 제목 글자 색과 여백 동일 */
+.C1 {
+    color: white;
+    padding: 10px;
+}
+
+/* 각 section의 제복의 배경 색상은 각각 다름 */
+#S1 > .C1 {
+    background-color: rgb(255, 97, 97);
+}
+#S2 > .C1 {
+    background-color: rgb(255, 160, 97);
+}
+#S3 > .C1 {
+    background-color: rgb(252, 255, 77);
+}
+#S4 > .C1 {
+    background-color: rgb(147, 255, 97);
+}
+#S5 > .C1 {
+    background-color: rgb(97, 218, 255);
+}
+#S6 > .C1 {
+    background-color: rgb(223, 97, 255);
+}

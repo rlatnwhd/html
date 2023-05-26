@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 3 - 김수종</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .tr1 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 30px;
+            background-color: aquamarine;
+            transition-property: width, height, background-color, transform;
+            transition-duration: 2s, 2s, 2s, 2s;
+        }
+
+        .tr1:hover {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(137, 200, 255);
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="tr1">
+        <h1>김수종</h1>
+    </div>
+</body>
+</html>

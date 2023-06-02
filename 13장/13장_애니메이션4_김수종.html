@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 4 - 김수종</title>
+    <style>
+        #box {
+            width: 60px; /* 가로 길이 지정 */
+            height: 60px; /* 세로 길이 지정 */
+            margin-left: 100px; /* 왼쪽 바깥 여백 지정 */
+            margin-top: 100px; /* 윗쪽 바깥 여백 지정 */
+            padding: 20px; /* 안쪽 여백 지정 */
+            animation-name: rotate; /* 애니메이션 이름 지정 */
+            animation-duration: 1s; /* 애니메이션 시간 지정 */
+            animation-direction: normal; /* 애니메이션 위치 지정(normal - 원래 시작 위치로 되돌아감)*/
+            animation-iteration-count: infinite; /* 애니메이션 반복(숫자 - 그만큼 반복 / infinite - 무한 반복) 지정 */
+        }
+
+        @keyframes rotate {
+            from {
+                background-color: rgb(0, 89, 255); /* 배경 색상 지정 */
+                transform: perspective(180px) rotateX(0deg) rotateY(0deg) /* 순서대로 (원근감 지정) (X축으로 회전) (Y축으로 회전) */
+            }
+
+            50% {
+                background-color: rgb(255, 255, 0); /* 배경 색상 지정 */
+                transform: perspective(180px) rotateX(-180deg) rotateY(0deg) /* 순서대로 (원근감 지정) (X축으로 회전) (Y축으로 회전) */
+            }
+            
+            to {
+                background-color: rgb(9, 255, 0); /* 배경 색상 지정 */
+                transform: perspective(180px) rotateX(-180deg) rotateY(-180deg) /* 순서대로 (원근감 지정) (X축으로 회전) (Y축으로 회전) */
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

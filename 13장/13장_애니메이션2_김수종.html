@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 2 - 김수종</title>
+    <style>
+        div {
+            width: 100px; /* 가로 길이 지정 */
+            height: 100px; /* 세로 길이 지정 */
+            margin: 50px; /* 바깥 여백 지정 */
+            float: left; /* 왼쪽 정렬 */
+        }
+
+        #box1 {
+            background-color: rgb(168, 255, 134); /* 배경 색상 지정 */
+            border: 1px solid gray; /* 테두리 지정 */
+            animation-name: shape; /* 애니메이션 이름 지정 */
+            animation-duration: 3s; /* 애니메이션 시간 지정 */
+        }
+
+        #box2 {
+            background-color: rgb(168, 255, 134); /* 배경 색상 지정 */
+            border: 1px solid gray; /* 테두리 지정 */
+            animation-name: rotate; /* 애니메이션 이름 지정 */
+            animation-duration: 5s; /* 애니메이션 시간 지정 */
+        }
+
+        @keyframes shape { /* 애니메이션 지정 */
+            from {
+                border: 1px solid gray; /* 테두리 지정 */
+            }
+
+            to {
+                border: 1px solid gray; /* 테두리 지정 */
+                border-radius: 50%; /* 꼭짓점 굴곡 지정 */
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg); /* 회전 */
+            }
+
+            to {
+                transform: rotate(45deg); /* 회전 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>
